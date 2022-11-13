@@ -13,7 +13,7 @@ export const tcpHandler = (socket: net.Socket): void => {
       socket.write("+SACK:GTHBD");
     }
 
-    if (data.toString().includes("+RESP")) {
+    if (data.toString().includes("+")) {
       // socket.write("+SACK:GTFRI");
 
       const repository = AppDataSource.getRepository(Location);
