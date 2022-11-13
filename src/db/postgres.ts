@@ -7,7 +7,7 @@ export const AppDataSource = new DataSource({
   password: "postgres",
   port: 5432,
   entities: [Location],
-  database: "postgres",
+  database: "gps",
   type: 'postgres',
   synchronize: true,
   logging: true,
