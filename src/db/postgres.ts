@@ -3,8 +3,8 @@ import { Location } from "../entities/Location";
 
 export const AppDataSource = new DataSource({
   host: "localhost",
-  username: "postgres",
-  password: "postgres",
+  username: "eddwinpaz",
+  password: "eddwinpaz",
   port: 5432,
   entities: [Location],
   database: "gps",
