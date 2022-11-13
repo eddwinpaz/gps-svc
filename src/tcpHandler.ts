@@ -12,7 +12,7 @@ export const tcpHandler = (socket: net.Socket): void => {
 
           if(data.toString().includes("+BUFF:GTFRI")){
             socket.write("+SACK:GTFRI");
-            
+
             const raw: string = data.toString();
             const imei: string = raw.split(",")[2];
             const location: Location = new Location();
@@ -20,6 +20,7 @@ export const tcpHandler = (socket: net.Socket): void => {
             location.raw = raw;
 
             await location.save();
+            console.log(data.toString());
           }
           // +BUFF:GTFRI,450102,865084030006793,,,10,1,5,3.5,0,592.8,-70.631011,-33.449598,20221112174035,0730,0001,32D5,5F15,00,0.0,,,,69,420000,,,,20221112174036,068F
         });
