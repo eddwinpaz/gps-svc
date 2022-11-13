@@ -1,5 +1,4 @@
 import net from "net";
-import { AppDataSource } from "./db/postgres";
 import { Location } from "./entities/Location";
 
 export const tcpHandler = (socket: net.Socket): void => {

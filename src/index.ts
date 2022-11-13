@@ -1,5 +1,6 @@
 import "reflect-metadata";
 import net, { Server } from "net";
+import { AppDataSource } from "./db/postgres";
 import { tcpHandler } from "./tcpHandler";
 const port: number = 7011;
 
