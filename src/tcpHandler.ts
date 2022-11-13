@@ -7,12 +7,13 @@ export const tcpHandler = (socket: net.Socket): void => {
     console.log("data received");
     console.log(data.toString());
     console.log("++++++++++++++++++++++++++");
+
     if (data.toString().includes("GTHBD")) {
       socket.write("+SACK:GTHBD");
     }
 
-    if (data.toString().includes("+BUFF:GTFRI")) {
-      socket.write("+SACK:GTFRI");
+    if (data.toString().includes("+RESP")) {
+      // socket.write("+SACK:GTFRI");
 
       const raw: string = data.toString();
       const imei: string = raw.split(",")[2];
