@@ -1,0 +1,32 @@
+{
+  "name": "gps-svc",
+  "version": "1.0.0",
+  "description": "Parse incomming TCP messages with gps sever service.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddwinpaz/gps-svc.git"
+  },
+  "keywords": [
+    "gps",
+    "server",
+    "service",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Eddwin Paz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eddwinpaz/gps-svc/issues"
+  },
+  "homepage": "https://github.com/eddwinpaz/gps-svc#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "typescript": "^4.8.4"
+  }
+}
