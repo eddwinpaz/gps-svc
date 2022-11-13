@@ -1,21 +1,9 @@
+import "reflect-metadata";
 import net, { Server } from "net";
+import { tcpHandler } from "./tcpHandler";
 const port: number = 7011;
 
-const server: Server = net.createServer((socket) => {
-  socket.on("data", (data: Buffer) => {
-    socket.write("+SACK:GTHBD");
-    console.log(data.toString());
-  });
-
-  socket.on("end", () => {
-    console.log("Connection has been closed.");
-  });
-
-  socket.on("close", () => {
-    console.log("Connection has been closed.");
-  });
-
-});
+const server: Server = net.createServer(tcpHandler);
 
 server.on("error", (err: Error) => {
   throw err;
