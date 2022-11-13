@@ -8,5 +8,9 @@ export const AppDataSource = new DataSource({
   port: 5432,
   entities: [Location],
   database: "postgres",
-  type: 'postgres'
+  type: 'postgres',
+  synchronize: true,
+  logging: true,
+  subscribers: [],
+  migrations: [],
 });
